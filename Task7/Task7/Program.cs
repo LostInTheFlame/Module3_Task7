@@ -13,11 +13,7 @@ namespace Task7
                 for (int i = 0; i < size; i++)
                 {
                     Console.Write($"Введите {i+1}-й элемент массива: ");
-                    if (int.TryParse(Console.ReadLine(), out array[i])) 
-                    {
-
-                    }
-                    else
+                    if (!int.TryParse(Console.ReadLine(), out array[i])) 
                     {
                         Console.WriteLine("\nОшибка при вводе значения.");
                         Console.ReadKey(true);
